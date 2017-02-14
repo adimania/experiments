@@ -1,0 +1,10 @@
+version: '2'
+services:
+  pgdb:
+    build: postgres96
+  icinga2:
+    build: icinga2
+    depends_on:
+      - pgdb
+  icingaweb2:
+    build: icingaweb2
